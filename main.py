@@ -11,14 +11,14 @@ button_click2 = st.button('Run multiline code')
 
 if button_click == True:
     with st.container():
-        os.system('touch python1.py')
-        os.system(f'echo {python_input} > python1.py')
+        os.popen('touch python1.py')
+        os.popen(f'echo {python_input} > python1.py')
         text = os.popen('python python1.py').read()
         st.markdown(text)
 
 if button_click2 == True:
     with st.container():
-        os.system('touch python2.py')
-        os.system(f'echo {python_input2} > python2.py')
+        os.popen('touch python2.py')
+        os.popen(f'echo {python_input2} > python2.py')
         text = os.popen('python python2.py').read()
         st.markdown(text)
